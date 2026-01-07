@@ -1,0 +1,91 @@
+*{
+    box-sizing : border-box;
+    margin : 0 ; 
+    padding : 0;
+}
+
+body{
+    background:rgb(88, 56, 61); 
+    
+}
+
+.dancingGif{
+    height: 350px;
+    width: 350px;
+    margin : 50px auto ; 
+    border : 4px solid black ; 
+    border-radius: 175px;
+    box-shadow: 0px 0px 12px 4px black ;
+    
+
+}
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg) scale(1);
+        
+    }
+    25%{
+        transform : rotate(90deg) scale(1.1);
+        box-shadow: 0px 0px 12px 4px black
+    }
+    50%{
+        transform : rotate(180deg) scale(1);
+        box-shadow: 0px 0px 12px 4px black
+    }
+    75%{
+        transform : rotate(270deg) scale(1.1);
+        box-shadow: 0px 0px 12px 4px black
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.dancingGif img{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 175px;
+}
+.disc {
+    animation: rotation 4s linear infinite; 
+}
+
+
+.playBox{
+    height: 85px;
+    width: 350px;
+    border : 4px solid rgb(91, 56, 56) ;
+    margin : 40px auto ; 
+    border-radius: 100px;
+    background: rgb(143, 90, 98);
+    box-shadow: 0px 0px 12px 4px rgb(131, 78, 78);
+    position : relative; 
+}
+@keyframes bassMoove {
+    0% {
+        transform:  scale(1);
+    }
+    50% {
+        transform:  scale(1.2);
+    }
+    100% {
+        transform:  scale(1);
+    }
+}
+#play{
+    height: 60px;
+    width: 60px;
+    border : 4px solid rgb(91, 56, 56) ;
+    border-radius: 40px;
+    background-color:rgb(39 19 22 / 49%);
+    margin : auto ;
+    position: absolute;
+    left: 42%;
+    top: 10%;
+    transition: 0.2s ease;
+    animation: bassMoove 1s infinite ;
+}
+
+
